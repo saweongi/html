@@ -1,0 +1,5 @@
+일단 로컬에 지정하기 git init
+그리고 온라인에 연동하기 git remote add 주소
+처음 사용할때 git push -u origin master 다음부턴 push만하면됨
+git add.
+git commit -m "설명"
