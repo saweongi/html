@@ -1,0 +1,13 @@
+package practice.submult01;
+
+public class result02 {
+
+	public static void main(String[] args) {
+		String enigma ="너오구늘리뭐너먹구지리";
+		String enigma1=enigma.replace("너","");
+		System.out.println(enigma1);
+		String enigma2=enigma.replace("구","");
+		
+	}
+
+}

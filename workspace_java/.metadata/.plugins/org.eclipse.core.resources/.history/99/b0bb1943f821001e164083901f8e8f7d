@@ -1,0 +1,12 @@
+package practice.submult01;
+
+public class result03 {
+
+	public static void main(String[] args) {
+		int example = 278;
+		int i= example /100;
+		System.out.println(i);
+
+	}
+
+}

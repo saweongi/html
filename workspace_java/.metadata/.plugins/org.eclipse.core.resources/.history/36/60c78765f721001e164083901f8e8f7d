@@ -1,0 +1,12 @@
+package practice.submult01;
+
+public class result02 {
+
+	public static void main(String[] args) {
+		String enigma ="너오구늘리뭐너먹구지리";
+		String[] i= enigma.split("너");
+		System.out.println(i);
+		
+	}
+
+}

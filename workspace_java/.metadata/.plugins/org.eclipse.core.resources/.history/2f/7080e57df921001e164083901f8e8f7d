@@ -1,0 +1,18 @@
+package practice.submult01;
+
+public class result01 {
+	public static void main(String[] args) {
+		String name = "사원기";
+		int age = 29;
+		float height = 177.9f;
+		String phone = "010-2918-7547";
+		String email = "wwdnjsrl2@naver.com";
+		
+		
+		System.out.println("이름 : "+name);
+		System.out.println("나이 : "+age);
+		System.out.println("키 : "+height);
+		System.out.println("연락처 : "+phone);
+		System.out.println("이메일 : "+email);
+	}
+}

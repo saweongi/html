@@ -1,0 +1,9 @@
+package ch03_system;
+
+public class SystemMain {
+	public static void main(String[] args) {
+		System.out.println("start");
+		System.out.println();
+		System.out.println("end");
+}
+}
