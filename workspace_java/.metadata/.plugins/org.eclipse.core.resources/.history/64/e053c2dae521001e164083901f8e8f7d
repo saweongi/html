@@ -36,7 +36,5 @@ public class VariableMain {
 		String fisrt = name.substring(num+1);
 		System.out.println(fisrt);
 		
-		
-		
 }
 }
