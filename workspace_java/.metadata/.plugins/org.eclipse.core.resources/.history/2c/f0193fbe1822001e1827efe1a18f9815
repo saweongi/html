@@ -1,0 +1,56 @@
+package practice.submult01;
+
+public class result01 {
+	public static void main(String[] args) {
+		String name = "사원기";
+		int age = 29;
+		float height = 180.0f;
+		String phone = "010-2918-7547";
+		String email = "wwdnjsrl2@naver.com";
+		
+		
+		System.out.println("이름 : "+name);
+		System.out.println("나이 : "+age);
+		System.out.println("키 : "+height);
+		System.out.println("연락처 : "+phone);
+		System.out.println("이메일 : "+email);
+		
+		String enigma ="너오구늘리뭐너먹구지리";
+		String enigma1=enigma.replace("너","");
+		System.out.println("1차 암호 해독[너 제거]:" +enigma1);
+		String enigma2=enigma1.replace("구","");
+		System.out.println("2차 암호 해독[구 제거]:" + enigma2);
+		String enigma3=enigma2.replace("리","");
+		System.out.println("3차 암호 해독[리 제거]:" + enigma3);
+		System.out.println("해독완료!! ->" +enigma3);
+		System.out.println(enigma3);
+		
+		int example = 278;
+		int i= example /100;
+		int i1 = (example /10) %10;
+		int i2 = example%10;
+		int sum = i +i1 + i2;
+		System.out.println("결과는 :" +sum);
+		
+		String x = example + "";
+		char y = x.charAt(0);
+		char y1 = x.charAt(1);
+		char y2 = x.charAt(2);
+	
+		int n = Character.getNumericValue(y);
+		int n1 = Character.getNumericValue(y1);
+		int n2 = Character.getNumericValue(y2);
+		int sum1 = n+n1+n2;
+		System.out.println("결과는 :" +sum1);
+		
+		char u = x.charAt(0);
+		char u1 = x.charAt(1);
+		char u2 = x.charAt(2);
+	
+		int m =  (int)u - '0';
+		int m1 = (int)u1 - '0';
+		int m2 = (int)u2 - '0';
+		System.out.println("결과는 :" +m+m1+m2);
+		
+	}
+}

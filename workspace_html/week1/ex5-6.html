@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        div {position: absolute;}
+        img{ position: absolute;}
+        #img1{z-index: -1; left:10px; top: 10px;
+        }
+        #img2{z-index: 1; left:50px; top: 50px;
+        }
+        #img3{z-index: 2; left:100px; top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>z-index</h1>
+    <hr>
+    <div>
+        <img id ="img1"src="./img/멜론.jpg" alt="" width="100px" height="140px">
+        <img id ="img2"src="./img/복숭아.png" alt="" width="100px" height="140px">
+        <img id ="img3"src="./img/파인애플.jpg" alt="" width="100px" height="140px">
+    </div>
+    
+</body>
+</html>
