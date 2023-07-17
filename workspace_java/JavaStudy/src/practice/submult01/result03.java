@@ -1,5 +1,7 @@
 package practice.submult01;
 
+import java.util.Scanner;
+
 public class result03 {
 
 	public static void main(String[] args) {
@@ -22,8 +24,7 @@ public class result03 {
 		System.out.println(n);
 		System.out.println(n1);
 		System.out.println(n2);
-			
-		
+	
 
 	}
 

@@ -1,0 +1,42 @@
+package ch04_operator;
+
+public class OperatorMain {
+
+	public static void main(String[] args) {
+	
+	int num = 10;
+	System.out.println(num);
+	num ++;
+	System.out.println(num);
+	num --;
+	System.out.println(num);
+	++num;
+	System.out.println(num);
+	--num;
+	System.out.println(num);
+	++num;
+	
+	int a, b;
+	a = num ++;
+	b = ++num;
+	System.out.printf("a: %d 는 할당후 증가, b: %d 는 증가후 할당.", a,b);
+	// 앞에 증감연산자가 있으면 수를 증가시키고 할당해주고
+	// 뒤에 증감연산자가 있으면 할당을 시키고 수를 증가시켜준다
+	
+	System.out.println("\n======================== 대입 연산자=============\n");
+	num = 10;
+	num +=1;
+	System.out.println(num);
+	num -=2;
+	System.out.println(num);
+	num*=2;
+	System.out.println(num);
+	num /=2;
+	System.out.println(num);
+	num %=2;
+	System.out.println(num);
+	
+	
+	}
+
+}

@@ -1,19 +1,43 @@
 package practice.submult01;
 
+import java.util.Scanner;
+
 public class result02 {
 
 	public static void main(String[] args) {
-		String enigma ="너오구늘리뭐너먹구지리";
-		String enigma1=enigma.replace("너","");
-		System.out.println("1차 암호 해독[너 제거]:" +enigma1);
-		String enigma2=enigma1.replace("구","");
-		System.out.println("2차 암호 해독[구 제거]:" + enigma2);
-		String enigma3=enigma2.replace("리","");
-		System.out.println("3차 암호 해독[리 제거]:" + enigma3);
-		System.out.println("해독완료!! ->" +enigma3);
-		System.out.println(enigma3);
+		Scanner scan = new Scanner(System.in);
+		System.out.println("이름을 입력해주세요:");
+		String name = scan.nextLine();
+		System.out.println("국어 점수를 입력해주세요:");
+		int a = Integer.parseInt(scan.nextLine());
+		System.out.println("영어 점수를 입력해주세요:");
+		int b = Integer.parseInt(scan.nextLine());
+		System.out.println("수학 점수를 입력해주세요:");
+		int c = Integer.parseInt(scan.nextLine());
+		
+		System.out.println("====================");
+		System.out.println("이름:" +name);
+		System.out.println("국어:" +a);
+		System.out.println("영어:" +b);
+		System.out.println("수학:" +c);
+		System.out.println("평균:"+(a+b+c)/3f);
+	
+		
+	String idBack ="1231476";
+	char idBack1= idBack.charAt(0);
+	String s = (idBack1 == '1' || idBack1 == '3')? ("남자"):("여자");
+	System.out.println(s);
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		scan.close();
 	}
 
 }
