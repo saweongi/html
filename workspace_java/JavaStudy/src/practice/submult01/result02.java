@@ -25,7 +25,7 @@ public class result02 {
 		
 	String idBack ="1231476";
 	char idBack1= idBack.charAt(0);
-	String s = (idBack1 == '1' || idBack1 == '3'||idBack1 == '9')? ("남자"):("여자");
+	String s = (idBack1 == '1' || idBack1 == '3'||idBack1 == '9')? ("남자"):(idBack1 == '2' || idBack1 == '4'|| idBack1 == '0')?("여자"):("외국인");
 	System.out.println(s);
 		
 		
