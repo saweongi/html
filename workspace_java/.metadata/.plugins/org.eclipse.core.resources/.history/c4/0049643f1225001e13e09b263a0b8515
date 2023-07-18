@@ -1,0 +1,49 @@
+package ch05_control;
+
+public class Conditional {
+	static String subject = "조건문";
+
+	public static void main(String[] args) {
+
+		int price = 30000;
+		int myMoney = 10000;
+
+		if (myMoney < price) {
+			System.out.println(subject);
+			System.out.println("돈이 부족합니다.");
+		}
+		String review = "음식이 맛있어요^^";
+		String msg = "";
+		if (review.length() < 12) {
+			msg = "리뷰는 12자 이상 작성하세요!!";
+
+		} else {
+			msg = "통과";
+		}
+
+		System.out.println(msg);
+
+		int score = 85;
+		String grade = "";
+		if (score >= 90) {
+			grade = "A";
+		} else if (score >= 80) {
+			grade = "B";
+		} else {
+			grade = "C";
+		}
+		System.out.println(grade);
+
+		String name = "사원기";
+		String phone = "010-2918-7547";
+		int age = 29;
+		if(name.length()>=1) {
+			if(phone.length()>=1) {
+				if(age>=14) {
+					
+				}
+			}
+			
+		}
+	}
+}

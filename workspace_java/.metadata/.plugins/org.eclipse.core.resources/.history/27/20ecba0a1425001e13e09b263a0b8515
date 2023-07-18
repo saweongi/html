@@ -1,0 +1,15 @@
+package ch05_control;
+
+import java.util.Scanner;
+public class Cho5_Ex01 {
+	public static void main(String[] args) {
+	Scanner scanner =new Scanner(System.in);
+	System.out.println("숫자를 입력하세요");
+	System.out.println(">>>");
+	
+	
+	
+	scanner.close();
+	
+	}
+}

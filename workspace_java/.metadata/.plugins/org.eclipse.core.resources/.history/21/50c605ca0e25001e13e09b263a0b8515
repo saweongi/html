@@ -1,0 +1,26 @@
+package ch05_control;
+
+public class Conditional {
+	static String subject= "조건문";
+	public static void main(String[] args) {
+		
+		int price = 30000;
+		int myMoney = 10000;
+		
+		if(myMoney < price){
+			System.out.println(subject);
+			System.out.println("돈이 부족합니다.");
+		}
+		String review = "음식이 맛있어요^^";
+		String msg = "";
+		if(review.length()< 12) {
+			msg = "리뷰는 12자 이상 작성하세요!!";
+			
+		
+		}else {
+			msg ="통과";
+		}
+		
+		System.out.println(msg);
+}
+}
