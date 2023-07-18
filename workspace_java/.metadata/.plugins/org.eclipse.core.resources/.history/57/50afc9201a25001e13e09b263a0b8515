@@ -16,6 +16,8 @@ public class ch05_Ex02 {
 			break;
 		}
 			
+		
+		
 		case "라떼": {
 	salePrice = 4500;
 	System.out.println(menu +salePrice+"원 입니다.");

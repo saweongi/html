@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<style>
+		
+	</style>
+<meta charset = "UTF-8">
+<title> 가위바위보 </title>
+<script>
+  
+	document.write("<h1>컴퓨터 가위, 바위, 보 맞추기</h1>");
+	let game = prompt("가위, 바위, 보 중 선택하세요?", "가위");
+	let com = Math.ceil( Math.random() * 3 );
+	console.log(com)
+	//랜덤함수를 활용하여 가위바위보 게임을 만들어보세요 ^^ 
+	document.write("<img src='images/math_com_" + com + ".jpg'>");
+	if (game='가위'){
+		game = 1;
+		document.write("<img src='images/math_user_" + game + ".jpg'>");
+	}
+	else if(game="바위"){
+		game = 2;
+		document.write("<img src='images/math_user_" + game + ".jpg'>");
+	}
+	else{
+		game = 3;
+		document.write("<img src='images/math_user_" + game + ".jpg'>");
+	}
+	
+	if(game == com ){
+		document.write("<img src='images/game_3.jpg'>");
+	}
+	else if((game==1 && com==3) || (game==2 && com==1) || (game==3 && com==2)){
+		document.write("<img src='images/game_1.jpg'>");
+	}
+	else{
+		document.write("<img src='images/game_2.jpg'>");
+	}
+	
+	
+	
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

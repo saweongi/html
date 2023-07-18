@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-else</title>
+</head>
+
+<body>
+    <h3>if-else를 이용한 학점 출력</h3>
+    <hr>
+    <script>
+        let grade;
+        let score = prompt("점수를 입력하세요"); //입력 받으면 기본적으로 문자열타입을 가짐
+        score = parseInt(score);
+
+        if (score >= 90) {
+            grade = "A";
+        }else if (score >= 80) {
+            grade = "B";
+        }else {
+            grade = "F";
+        }
+        document.write(score + "는" + grade + "입니다.<br>");
+        
+    </script>
+
+</body>
+
+</html>
