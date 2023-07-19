@@ -1,0 +1,39 @@
+package ch05_control;
+
+public class LoopFor {
+	public static void main(String[] args) {
+		System.out.println();
+		
+		for(int i=1; i<11;i++) {
+			System.out.println(i);
+		}
+		
+		int sum = 0;
+		for(int i=1; i<21;i++) {
+			sum+=i;
+		}
+		System.out.println(sum);
+	
+		
+		
+		int sum3 = 0;
+		for(int i=1; i<41;i++) {
+			if(i%2==0) {
+			sum3+=i;
+		}
+		}
+		System.out.println(sum3);
+		
+		
+		int sum4 = 0;
+		for(int i=1; i<41;i*=2) {
+			
+			sum4+=i;
+		}
+		System.out.println(sum4);
+	}
+	
+	
+	
+	
+}

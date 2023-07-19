@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 만들기</title>
+</head>
+
+<body>
+
+    <script>
+        let colrow = prompt("몇 칸으로 테이블을 만들어 드릴까요?");
+        document.write("<table border='1'>");
+        let i, j;
+        for (i = 1; i <= colrow; i++) {
+            document.write("<tr>")
+            for (j = 1; j <= colrow; j++) {
+
+                document.write("<td>" +i +"x"+ j + "</td>")
+
+
+            }
+
+        }
+        document.write("</tr>")
+
+
+        document.write("</table>")
+    </script>
+</body>
+
+</html>

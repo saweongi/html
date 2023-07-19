@@ -1,0 +1,58 @@
+package ch05_control;
+
+import java.util.Scanner;
+
+public class LoopFor {
+	public static void main(String[] args) {
+		System.out.println();
+
+		for (int i = 1; i < 11; i++) {
+			System.out.println(i);
+		}
+
+		int sum = 0;
+		for (int i = 1; i < 21; i++) {
+			sum += i;
+		}
+		System.out.println(sum);
+
+		int sum3 = 0;
+		for (int i = 1; i < 41; i++) {
+			if (i % 2 == 0) {
+				sum3 += i;
+			}
+		}
+		System.out.println(sum3);
+		
+		
+		Scanner scanner =new Scanner(System.in);
+		System.out.println("원하는 구구단을 수를 입력하세요.");
+		int e = scanner.nextInt();
+		int sum4 = 0;
+		
+		for (int i = 1; i < 10; i++) {
+			sum4 = e * i;
+			System.out.println(e + "x" + i + "=" + sum4);
+			
+		}
+		String star="";
+	
+		for (int i = 0; i < 6; i++) {
+		System.out.println(star +="*");
+		}
+		
+		for (int i =10; i >0; i--) {
+			System.out.println(i);
+		}
+		
+		for (int i =0; i<20; i++){
+			System.out.println("||||||||");
+			if(i==4|| i==9 ||i==14) {
+				System.out.println("---------");
+			}
+		}
+		
+		
+	}
+
+}

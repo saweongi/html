@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM</title>
+</head>
+<body>
+    <h3>DOM 객체 P의 프로퍼티, 스타일, 이벤트 리스너</h3>
+    <hr>
+    <p id ="firstP" style="color:blue; background-color: yellow;" onclick="this.style.color='red'">
+        이것은 <span style="color:red;">문장 입니다.</span>"
+
+
+    </p>
+    <button type ="button" onclick="fn_change()">변경</button>
+    <script>
+        let first = document.getElementById("firstP");
+        console.log(first);
+        let text = "first.id= " + first.id + "\n";
+        text += "first.tagName=" + first.tagName + "\n";
+        text += "first.innerHTML=" + first.innerHTML + "\n";
+        text += "first.style.color=" + first.style.color + "\n";
+        text += "first.onclick=" + first.onclick + "\n";
+        text += "first.childElementCount=" + first.childElementCount + "\n";
+        text += "first.offsetWidth=" +first.offsetWidth + "\n";
+        alert(text);
+        
+       function fn_change(){
+        first.style.color = 'black'; //함수를 통해서 색깔바꾸기
+        first.innerHTML = "<h1>짜짠!!</h1>";
+       }
+    </script>
+    
+</body>
+</html>
