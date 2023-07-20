@@ -1,0 +1,85 @@
+package ch05_control;
+
+import java.util.Scanner;
+
+public class LoopWhile {
+	public static void main(String[] args) {
+//		int i = 1;
+//		while (i <= 10) {
+//			System.out.println(i);
+//			i++;
+//
+//		}
+//		int j = 1;
+//		while (true) {
+//			System.out.println(j);
+//			j++;
+//			if (j == 10) {
+//				break;
+//			}
+//
+//		}
+//		boolean flag = true;
+//		while (flag) {
+//			j++;
+//			if (j == 20) {
+//				flag = false;
+//			}
+//		}
+//
+//		Scanner scanner = new Scanner(System.in);
+//		boolean isRun = true;
+//		while (isRun) {
+//			System.out.println("이름을 입력하세요(종료 q or Q");
+//			System.out.println(">>>");
+//			String input = scanner.nextLine();
+//			if (input.equals("q") || input.equals("Q")) {
+//				isRun = false;
+//				System.out.println("종료 하겠습니다.");
+//			} else {
+//				System.out.println(input + "님 환영합니다.^^");
+//
+//			}
+//			System.out.println("===========================");
+//
+//		}
+		
+		int i1=1;
+		int j1=0;
+		do {
+			i1+=1;
+			j1=1;
+			System.out.println(i1*j1);
+			
+		} while (i1<10);
+			
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

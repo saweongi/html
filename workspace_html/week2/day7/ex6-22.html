@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선언적 & 익명 함수</title>
+    <script>
+        function adder(a,b){
+            let sum;
+            sum = a + b;
+            return sum;
+        }
+
+        console.log(adder(2,8));
+        
+
+
+
+        //익명 함수 이름이 없음.
+        //익명함수는 선언적 함수와 다르게 코드 이후 실행가능함.
+        //변수에 함수를 담을 수 있음.
+        let fn_noname =function(){
+            console.log("익명함수임.");
+        }
+        // 변수에 담긴 익명함수는 변수명()로 호출가능
+        fn_noname();
+        console.log(function(){
+            console.log("익명함수2임");
+        }());
+        //익명 함수는 특정시점에 필요한 기능을 작성하여 사용
+        
+
+        
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <h3>함수 adder</h3>
+    <hr>
+    <script>
+        let n =adder(24567, 98374);
+        document.write("24567 + 98374 = 는" + n)
+
+
+    </script>
+</body>
+</html>
