@@ -10,4 +10,7 @@
     <fullyQualifiedTypeName name="javax.sound.midi.SysexMessage"/>
     <fullyQualifiedTypeName name="java.io.InterruptedIOException"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.Number"/>
+    <fullyQualifiedTypeName name="java.security.PublicKey"/>
+    <fullyQualifiedTypeName name="ch06_Method.MethodMain"/>
 </qualifiedTypeNameHistroy>

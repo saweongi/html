@@ -1,0 +1,28 @@
+package practice.submult01;
+
+import java.util.Random;
+import java.util.Scanner;
+
+
+
+public class result05 {
+
+	public static void main(String[] args) {
+		Random random = new Random();
+		int j = random.nextInt(51);
+		for(int i=1; i>=5; i++) {
+			
+			System.out.println(j);
+			Scanner scanner =new Scanner(System.in);
+			System.out.println("숫자를 입력해주세요 :");
+			int qwer = scanner.nextInt();
+			
+			
+		}
+		
+		
+		
+		
+	}
+
+}

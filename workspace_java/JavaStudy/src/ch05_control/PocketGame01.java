@@ -1,5 +1,6 @@
 package ch05_control;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class PocketGame01 {
@@ -7,6 +8,7 @@ public class PocketGame01 {
 	public static void main(String[] args) {
 		int enemyHp = 100;
 		Scanner scanner = new Scanner(System.in);
+		
 		outer : while(true) {
 			System.out.println("야생의 파이리를 만났습니다.");
 			System.out.println("행동을 선택해주세요");
