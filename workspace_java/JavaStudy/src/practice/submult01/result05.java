@@ -38,7 +38,7 @@ public class result05 {
 //			}
 	
 		String q="";
-		while(!q.equals("q")||!q.equals("exit")||!q.equals("Q")||!q.equals("")) {
+		while(True) {
 			 
 			System.out.println("============ 엘리베이터 ============");
 			
@@ -49,8 +49,8 @@ public class result05 {
 			System.out.println("몇층에 계시나요?[종료는 q또는 exit]:");
 			
 			 q = scanner.nextLine();
-			 if(q.equals("q")) {
-				 
+			 if(q.equals("q")||q.equals("Q")||q.equals("exit")||q.equals("Q")||) {
+				 break;
 			 }
 			 
 			 int q1 = Integer.parseInt(q);
