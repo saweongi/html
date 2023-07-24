@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>사용자에게 문자을 입력 받아 줄임말을 만들어주세요</h3>
+    <script>
+
+        let msg = prompt("문자을 입력하세요");
+        let short = "";
+        let short1 = msg.split(" ");
+
+        for (let i = 0; i < short1.length; i++) {
+            short += short1[i].slice(0, 1);
+
+        }
+        document.write(msg + " 의 줄인말은: " + "<strong>" + short + "</strong>");
+    </script>
+
+</body>
+
+</html>

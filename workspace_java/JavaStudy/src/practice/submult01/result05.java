@@ -17,7 +17,11 @@ public class result05 {
 			
 			System.out.println("숫자를 입력해주세요 :");
 			int qwer = Integer.parseInt(scanner.nextLine());
+<<<<<<< HEAD
 			if(i==1) {
+=======
+			if(i==0) {
+>>>>>>> b12ddee0dfa268e197dac8b21360afc5492970e6
 				System.out.println("실패하였습니다. 정답은"+randoms+"입니다.");
 				i=0;
 			}
@@ -31,7 +35,11 @@ public class result05 {
 			}
 			else {
 			System.out.println("정답입니다.");
+<<<<<<< HEAD
 			i=0;
+=======
+			break;
+>>>>>>> b12ddee0dfa268e197dac8b21360afc5492970e6
 		}
 		
 		
@@ -49,7 +57,11 @@ public class result05 {
 			System.out.println("몇층에 계시나요?[종료는 q또는 exit]:");
 			
 			String q = scanner.nextLine();
+<<<<<<< HEAD
 			 if(q.equals("q")||q.equals("Q")||q.equals("exit")||q.equals("Q")) {
+=======
+			 if(q.equals("q")||q.equals("Q")||q.equals("exit")||q.equals("EXIT")) {
+>>>>>>> b12ddee0dfa268e197dac8b21360afc5492970e6
 				 break;
 			 }
 			 
@@ -87,6 +99,3 @@ public class result05 {
 		}
 	}
 }
-		
-	
-	

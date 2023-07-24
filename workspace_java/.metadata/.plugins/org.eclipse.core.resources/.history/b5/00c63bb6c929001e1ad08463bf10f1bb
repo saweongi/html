@@ -1,0 +1,65 @@
+package ch07_array;
+
+import java.io.ObjectInputStream.GetField;
+
+import javax.security.auth.x500.X500Principal;
+
+public class ArrayMain {
+
+	public static void main(String[] args) {
+		String samjang = "삼장";
+		String woogong = "오공";
+		String saojeong = "사오정";
+		String palgye = "저팔계";
+
+		String[] seougi = new String[4];
+		System.out.println(seougi.length);
+		System.out.println(seougi[0]);
+		int[] numbers = new int[3];
+		System.out.println(numbers[0]);
+		boolean[] bools = new boolean[5];
+		System.out.println(bools[0]);
+
+		seougi[0] = samjang;
+		System.out.println(seougi[0]);
+		seougi[1] = woogong;
+		seougi[2] = saojeong;
+		seougi[3] = palgye;
+		System.out.println(seougi);
+		
+		printArr(seougi);
+		for (int i = 0; i < seougi.length; i++) {
+			seougi[i] = "서유기 " +seougi[i];
+
+		}
+		printArr(seougi);
+		
+		for(int i =0; i< seougi.length; i++) {
+			if(seougi[i].contains("오공")) {
+				seougi[i] = seougi[i].replace("서유기", "드래곤볼");
+			}
+		}
+		printArr(seougi);
+		String [] student = {"팽수", "길동", "동길","길수"};
+		printArr(student);
+		String subjects = "자바, SQL, 화면구현, JSP";
+		String [] subArr = subjects.split(",");
+		printArr(subArr);
+		for(int i= 0; i<subArr.length; i++) {
+			subArr[i]= subArr[i].trim(); 
+		}
+		printArr(subArr);
+		
+
+	}
+	public static void printArr(String[] strArr) {
+		for(int i =0; i< strArr.length;i++) {
+			if(i == strArr.length -1) {
+				System.out.println(strArr[i]);
+				break;
+			}
+			System.out.print(strArr[i]+",");
+		}
+	}
+
+}
