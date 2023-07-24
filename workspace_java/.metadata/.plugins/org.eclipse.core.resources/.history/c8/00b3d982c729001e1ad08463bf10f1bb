@@ -1,0 +1,35 @@
+package ch07_array;
+
+import javax.security.auth.x500.X500Principal;
+
+public class ArrayMain {
+
+	public static void main(String[] args) {
+		String samjang = "삼장";
+		String woogong = "오공";
+		String saojeong ="사오정";
+		String palgye ="저팔계";
+		
+		String [] seougi = new String[4];
+		System.out.println(seougi.length);
+		System.out.println(seougi[0]);
+		int [] numbers = new int[3];
+		System.out.println(numbers[0]);
+		boolean [] bools = new boolean[5];
+		System.out.println(bools[0]);
+		
+		seougi[0] = samjang;
+		System.out.println(seougi[0]);
+		seougi[1] = woogong;
+		seougi[2] = saojeong;
+		seougi[3] = palgye;
+		System.out.println(seougi);
+		for(int i =0; i<seougi.length; i++) {
+			System.out.println(seougi[i]);
+			
+		}
+		
+		
+	}
+
+}
