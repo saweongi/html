@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤 추첨</title>
+    <style>
+        div { display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            height:100vh; text-align: center;}
+    </style>
+ 
+</head>
+<body>
+    <div>
+    <h1>classmate</h1>
+    <h2 id="array-content" onmouseover="fn_stop()" onmouseout="fn_move()"></h2>
+    <button id="stop">랜덤선택</button>
+    <h2 id="result"></h2>
+</div>
+    <script>
+        let classmate =["김규영", "김동현", "김상준", "김성운", "김세준", "노윤기",
+							 "박근혜", "사원기", "송현지", "신가희", "예준서", "윤가영",
+							 "윤서준", "이규환", "이상희", "이영규", "이재우", "이호제",
+							 "임지윤", "정민형", "조하은", "최민혁", "최성웅" ];
+       document.getElementById("array-content").innerHTML = '|' +classmate.join('|') + '|';
+      
+       let move = setInterval(fn_slice, 100);
+       function fn_slice(){
+        let obj = document.getElementById("array-content");
+        let text = obj.innerText;
+        first = text.substr(0,1);
+        last = text.substr(1);
+        obj.innerText = last + first;
+       }
+       function fn_stop(){
+        clearInterval(move);
+       }
+       function fn_move(){
+        move =setInterval(fn_slice, 100);
+       }
+        
+    </script>
+</body>
+</html>
