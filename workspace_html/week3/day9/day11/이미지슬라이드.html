@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼을 클릭하면 이미지가 바뀌는...</title>
+    <style>
+        #container{width: 60%; margin: 20px auto; text-align: center;}
+        img {width: 60%; height: 60%;}
+        p{background-color: black; color : white;}
+        strong{color: yellow}
+        button{position: relative; font-size: 50px; bottom:300px}
+    </style>
+    <script>
+        let files =["./img/어바웃타임.jpg","./img/어바웃타임1.jpg","./img/어바웃타임2.jpg"];
+        let idx =0;
+
+        // 1.이미지 객체 로드
+        let imgs =[];
+        let obj;
+        for(let i =0; i < files.length; i++){
+            imgs[i] = new Image();
+            imgs[i].src = files[i];
+        }
+
+        // 2. 변경 대상 객체를 찾아서 src 변경
+        window.onload = function(){
+            obj = document.getElementById("img_id");
+            //
+            setInterval(fn_right,1000);
+        }
+        function fn_left(){
+            //작아지게 (0까지 작아졌다면 이미지의 마지막 인덱스로)
+           
+            if(idx==0){
+                idx = imgs.length-1;
+            }else{
+                idx--;
+            }
+           
+            obj.src = imgs[idx].src;
+
+            
+            
+        }
+        function fn_right(){
+             //커지게 (이미지의 최대 수량까지 증가했다면 -> 0으로)
+             
+             if(idx == imgs.length-1){
+                idx =0;
+             }else{
+                idx++;
+             }
+           
+            obj.src = imgs[idx].src;
+
+        }
+    </script>
+</head>
+<body>
+ <div id="container">
+    <h1></h1>
+    <p>모태솔로 팀(돔놀 글리슨)은 성인이 된 날, 아버지(빌 나이)로부터 놀랄만한 가문의 비밀을 듣게 된다. 바로 시간을 되돌릴 수 있는 능력이 있다는 것! 그것이 비록 히틀러를 죽이거나 여신과 뜨거운 사랑을 할 수는 없지만, <strong>여자친구는 만들어 줄 순 있으리..</strong> 꿈을 위해 런던으로 간 팀은 우연히 만난 사랑스러운 여인 메리에게 첫눈에 반하게 된다. 그녀의 사랑을 얻기 위해 자신의 특별한 능력을 마음껏 발휘하는 팀. 어설픈 대시, 어색한 웃음은 리와인드! 뜨거웠던 밤은 더욱 뜨겁게 리플레이! 꿈에 그리던 그녀와 매일매일 최고의 순간을 보낸다. 하지만 그와 그녀의 사랑이 완벽해질수록 팀을 둘러싼 주변 상황들은 미묘하게 엇갈리고, 예상치 못한 사건들이 여기저기 나타나기 시작하는데… 어떠한 순간을 다시 살게 된다면, 과연 완벽한 사랑을 이룰 수 있을까?</p>
+    <p>인생은 모두가 함께 하는 여행이다. 매일매일 사는동안...우리가 할수 있는건 최선을 다해 이 멋진 여행을 만끽하는것이다</p>
+    <div>
+        <button id="left" onclick="fn_left()">&lt;</button>
+        <img src="./img/어바웃타임.jpg" id="img_id" alt="">
+        <button id="right" onclick="fn_right()">&gt;</button>
+    </div>
+
+ </div>
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+package ch08_collection;
+
+import java.util.HashMap;
+
+public class CollectionMap {
+	public static void main(String[] args) {
+		// key의 value 한쌍인 데이터를 저장
+		// 웹에서 데이터를 JSON방식으로 많이 이용하는데 이것도 key : value쌍
+		// 첫번째 String <-- 키의 타입, 두번째 String value 타입
+		HashMap<String, String> stuMap = new HashMap<String, String>();
+		// 첫번째 String <-- 키의 타입, 두번째 int value 타입
+		HashMap<String, Integer> coinMap = new HashMap<String, Integer>();
+		
+		// .put("key", "value") 데이터 추가
+		stuMap.put("첫째", "길동");
+		stuMap.put("둘째", "동길");
+		stuMap.put("셋째", "홍길");
+		
+		
+	}
+}
