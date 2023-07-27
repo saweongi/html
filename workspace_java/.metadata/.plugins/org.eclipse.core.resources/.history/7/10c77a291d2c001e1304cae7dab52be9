@@ -1,0 +1,61 @@
+package ch09_class.school;
+
+
+
+public class Student {
+	private  String name;
+	private  int kor;
+	private  int eng;
+	private  int math;
+	private  double avg;
+	
+	
+	// 2.생성자 만들기
+	public Student(String name, int kor, int eng, int math) {
+		this.name = name;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+	}
+	
+	//3.toString()추가 -->객체 필드를 꺼내와서 사용할때씀
+	@Override
+	public String toString() {
+		return "Student [name=" + name + ", kor=" + kor + ", eng=" + eng + ", math=" + math + ", avg=" + avg + "]";
+	}
+	
+	//4. Getter and Setters..
+
+	public String getName() {
+		return name;
+	}
+	public void setName(String name){
+		this.name = name;
+		this.eng = eng;
+		
+	}
+	public int getKor() {
+		return kor;
+	}
+	public int getEng() {
+		return eng;
+	}
+	public int getmath() {
+		return math;
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+	
+	
+	
+	
+
+
+}
