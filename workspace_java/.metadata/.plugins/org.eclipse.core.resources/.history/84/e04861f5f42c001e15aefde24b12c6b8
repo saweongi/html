@@ -1,0 +1,13 @@
+package practice.submult01;
+
+public class result08 {
+
+	public static void main(String[] args) {
+	
+	System.out.println("----------------------------------------");
+	System.out.println("1.계좌생성 |" +" 2.계좌생성 |"+" 3.예금 |"+" 4.출금 |"+"5.종료 |");
+	
+
+	}
+
+}

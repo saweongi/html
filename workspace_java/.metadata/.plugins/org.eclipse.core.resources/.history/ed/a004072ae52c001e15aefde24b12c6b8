@@ -1,0 +1,33 @@
+package ch09_class.future;
+
+public class FutureStudent {
+	
+	//전역 변수를 사용하려면 클래스 수준에서 정적(static)필드를 선언해야함.
+	
+	private static int cnt =1;
+	
+	//학생 상태필드
+	private int stuId;
+	private String name;
+	private String enName;
+	private int level;
+	private int exp;
+	
+	public FutureStudent(int stuId, String name, String enName, int level, int exp) {
+	
+		this.stuId = cnt;
+		this.name = name;
+		this.enName = enName;
+		this.level = level;
+		this.exp = exp;
+		cnt++;
+	}
+	public FutureStudent(String name, String enNaString) {
+		
+		//생성자 오버로딩 객체 생성시 매개변수를 2개만 입력한다면
+		//level과 exp는 1과 0으로 디폴트 값을 넣어 메인 생성자 호출
+		this(name, enName, 1,0);
+	}
+	
+	
+}

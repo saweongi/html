@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./css/nameList.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <h1>참가 신청서</h1>
+        <form id="myForm">
+
+            <input type="text" id="userName" placeholder="이름을 입력하세요" required>
+            <button tupe="button" onclick="fn_register()">신청</button>
+
+        </form>
+
+        <hr>
+        <div id="nameList"></div>
+        <script>
+            document.getElementById('myForm').addEventListener('KEYPRESS', (E) => {
+                if (e.key == 'Enter') {
+                    e.preventDefault();
+                    fn_register();
+                }
+
+            });
+            function fn_register() {
+                let userName = document.getElementById("userName");
+
+
+                //p태그생성
+                let newP = document.createElement('p');
+                let btn = document.createElement('span');
+                btn.setAttribute("class", 'del');
+                btn.innerHTML = 'X';
+                btn.onclick = function () {
+                    let body = this.parentElement;
+                    let parent_div = this.parentElement.parentElement;
+                    parent_div.removeChild(body);
+                }
+                //X버튼의 속성 class의 값을 del하면 css가 적용됨.
+                newP.innerHTML = userName.value;
+                userName.value = '';
+                newP.appendChild(btn);
+                userName.appendChild(newP);
+
+
+
+
+                let nameList = document.getElementById('nameList');
+
+                //하위 요소의 첫번째에 적용
+                nameList.insertBefore(newP, nameList.childNodes[0]);
+
+
+            }
+
+
+        </script>
+
+
+    </div>
+
+</body>
+
+</html>

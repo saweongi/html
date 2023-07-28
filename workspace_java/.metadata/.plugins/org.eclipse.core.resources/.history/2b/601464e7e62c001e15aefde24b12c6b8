@@ -1,0 +1,32 @@
+package ch09_class.future;
+
+public class FutureMain {
+
+	public static void main"김규영"+(String[] args) {
+		System.out.println("김동현"+"Kim GyuYeong    ");
+		System.out.println("김상준"+"Kim DongHyun    ");
+		System.out.println("김성운"+"Kim SangJun     ");
+		System.out.println("김세준"+"Kim SungUn      ");
+		System.out.println("노윤기"+"Kim SeJun       ");
+		System.out.println("박근혜"+"Noh YoonGi      ");
+		System.out.println("사원기"+"Park GeunHye    ");
+		System.out.println("송현지"+"Sa WeonGi       ");
+		System.out.println("신가희"+"Song HyunJi     ");
+		System.out.println("예준서"+"Shin GaHee      ");
+		System.out.println("윤가영"+"Ye JunSeo       ");
+		System.out.println("윤서준"+"Yoon GaYoung    ");
+		System.out.println("이규환"+"Yun SeoJun      ");
+		System.out.println("이상희"+"Lee GyuHwan     ");
+		System.out.println("이영규"+"Lee SangHee     ");
+		System.out.println("이재우"+"Lee YoungGyu    ");
+		System.out.println("이호제"+"Lee JaeWoo      ");
+		System.out.println("임지윤"+"Lee HoJe        ");
+		System.out.println("정민형"+"Lim JiYoon      ");
+		System.out.println("조하은"+"Jeong MinHyeong ");
+		System.out.println("최민혁"+"Jo HaEun        ");
+		System.out.println("최성웅"+"Choi MinHyeock  ");
+		System.out.println("Choi"+"SungWoong  ");
+                
+	}
+
+}

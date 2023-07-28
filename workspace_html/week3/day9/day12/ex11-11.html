@@ -41,6 +41,7 @@
     let startX =0, startY =0;
     let dragging = false;
     let tools ='p';
+    let size =1;
     function init(){
         canvas = document.getElementById('myCanvas');
         context = canvas.getContext('2d');
@@ -56,7 +57,9 @@
         startX =e.offsetX;
         startY = e.offsetY;
         dragging = true;
-
+        if(tools == "E"){
+        context.clearRect(startX,startY, size, size);
+        }
     }
     function up(e){
         dragging = false;
@@ -65,12 +68,19 @@
         dragging= false;
     }
     function draw(curX, curY){
+        if(tools==='p'){
+             
         context.beginPath();
         context.moveTo(startX,startY);
         context.lineTo(curX, curY);
         context.stroke();
+        }else{
+            context.clearRect(startX,startY, size, size);
+        }  
 
+    
     }
+      
    
     function move(e){
         if(!dragging){
@@ -91,13 +101,11 @@
         
         }else if(obj.id =='p_size'){
             context.lineWidth = obj.value;
+            size = obj.value;
         }
         else if(obj.name =='tool'){
             tools = obj.value;
-            if(tools==='E'){
-               
-            }
-         
+            
         }
 
     }

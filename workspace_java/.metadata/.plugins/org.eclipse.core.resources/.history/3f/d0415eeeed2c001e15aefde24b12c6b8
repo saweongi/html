@@ -1,0 +1,27 @@
+package ch09_class.typing;
+
+import java.util.ArrayList;
+
+public class Dictionary {
+	//전역적으로 사용하는 상수
+	public static final int OPIION_STUDENT_NAME = 0;
+	public static final int OPIION_CODING_WORD = 1;
+	public static final int OPIION_RANDOM_ALPHABET = 2;
+	
+	//option 0:학생목록, 1:코딩용어, 2:랜덤알파벳
+	
+	public static ArrayList<String> makeWordList(int option){
+		ArrayList<String> wordList = new ArrayList<String>();
+		
+		if(option == OPIION_STUDENT_NAME ) {
+			
+		}else if(option == OPIION_CODING_WORD ) {
+			
+		}else if(option == OPIION_RANDOM_ALPHABET  ) {
+			
+		}
+	
+	return wordList;
+
+}
+}
