@@ -1,0 +1,55 @@
+package ch09_class.homepage;
+
+import java.util.Scanner;
+
+public class HomepageMain {
+
+	public static void main(String[] args) {
+		
+		//회원가입, 로그인
+		MemberDB memDB = MemberDB.getInstance();
+		Scanner scanner = new Scanner(System.in);
+		while(true) {
+			System.out.println("행동을 선택해주세요.");
+			System.out.println("1.회원가입|2.로그인|3.회원몰록|4.종료");
+			System.out.println(">>> ");
+			int command = Integer.parseInt(scanner.nextLine());
+			if(command==1) {
+				System.out.println("아이디를 입력해주세요");
+				System.out.println(">>> ");
+				String id = scanner.nextLine();
+				
+				System.out.println("비번을 입력해주세요");
+				System.out.println(">>> ");
+				String pw = scanner.nextLine();
+				
+				System.out.println("이름을 입력해주세요");
+				System.out.println(">>> ");
+				String name = scanner.nextLine();
+				
+				Member mem = new Member(id, pw, name);
+				memDB.registMember(mem);
+				
+			}else if(command==2)
+			{
+				
+			}else if(command==3) {
+				//목록조회
+				memDB.showMemberList();
+			}else if(command==4) {
+				System.out.println("종료");
+				break;
+			}
+		
+		
+		}
+		
+		//게시판 목록
+		//글쓰기
+		//글조회
+		//로그아웃
+		
+
+	}
+
+}

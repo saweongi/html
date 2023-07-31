@@ -75,6 +75,7 @@ public class BankApplication {
 				int sum =moneys+money;
 				String  sumstring=  account[i].substring(0,12);
 				account[i] = sumstring+sum;
+				System.out.println("예금후 잔액: "+sum);
 			}
 			}
 		}
@@ -95,6 +96,7 @@ public class BankApplication {
 				int sum =moneys-money;
 				String  sumstring=  account[i].substring(0,12);
 				account[i] = sumstring+sum;
+				System.out.print("출금후 잔액: "+sum);
 			}
 		}
 		}

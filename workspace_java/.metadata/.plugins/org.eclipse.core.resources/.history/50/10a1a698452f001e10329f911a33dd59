@@ -1,0 +1,13 @@
+package ch09_class.quiz;
+
+import java.util.ArrayList;
+
+public class MovieDB {
+
+	private ArrayList<Movie> movieList = new ArrayList<Movie>();
+	
+	public MovieDB() {
+		movieList.add(new Movie("신세계", "거 죽기 딱 좋은 날씨네", "박성웅", "ㅅㅅㄱ"));
+		movieList.add(new Movie("신세계", "거 죽기 딱 좋은 날씨네", "박성웅", "ㅅㅅㄱ"));
+	}
+}
