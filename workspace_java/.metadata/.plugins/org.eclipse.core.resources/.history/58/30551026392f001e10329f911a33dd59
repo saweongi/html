@@ -9,7 +9,7 @@ public class BankApplication {
 	public static void main(String[] args) {
 	String[] account = new String[2];
 	String plus= "";
-
+	System.out.println(account[0]);
 
 	while(true) {
 	System.out.println("----------------------------------------");
@@ -47,9 +47,7 @@ public class BankApplication {
 		System.out.println("계좌 목록");
 		System.out.println("-------------");
 		for(int i=0; i<account.length;i++) {
-			if(account[i] != null) {
-				System.out.println(account[i]);
-			}
+			System.out.println(account[i]);
 		}
 
 	
@@ -68,14 +66,11 @@ public class BankApplication {
 		System.out.print("예금액:");
 		int money =Integer.parseInt(scanner.nextLine());
 		for(int i=0; i<account.length;i++) {
-			if(account[i] != null) {
-			
 			if(account[i].contains(saccount)){
-				int moneys=Integer.parseInt(account[i].substring(11).trim());
+				int moneys=Integer.parseInt(account[i].substring(14).trim());
 				int sum =moneys+money;
-				String  sumstring=  account[i].substring(0,12);
+				String  sumstring=  account[i].substring(0,16);
 				account[i] = sumstring+sum;
-			}
 			}
 		}
 		
@@ -89,9 +84,9 @@ public class BankApplication {
 		int money =Integer.parseInt(scanner.nextLine());
 		for(int i=0; i<account.length;i++) {
 			if(account[i].contains(saccount)){
-				int moneys=Integer.parseInt(account[i].substring(11).trim());
+				int moneys=Integer.parseInt(account[i].substring(14).trim());
 				int sum =moneys-money;
-				String  sumstring=  account[i].substring(0,12);
+				String  sumstring=  account[i].substring(0,16);
 				account[i] = sumstring+sum;
 			}
 		}
