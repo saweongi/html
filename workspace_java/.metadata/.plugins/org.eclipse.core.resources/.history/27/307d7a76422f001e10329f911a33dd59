@@ -88,15 +88,12 @@ public class BankApplication {
 		System.out.print("출금액:");
 		int money =Integer.parseInt(scanner.nextLine());
 		for(int i=0; i<account.length;i++) {
-			
-			if(account[i] != null) {
 			if(account[i].contains(saccount)){
 				int moneys=Integer.parseInt(account[i].substring(11).trim());
 				int sum =moneys-money;
 				String  sumstring=  account[i].substring(0,12);
 				account[i] = sumstring+sum;
 			}
-		}
 		}
 		System.out.println("결과: 출금이 성공되었습니다.");
 	}else {
