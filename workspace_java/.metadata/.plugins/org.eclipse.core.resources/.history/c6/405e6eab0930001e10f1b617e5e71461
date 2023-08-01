@@ -1,0 +1,16 @@
+package ch10_extends_interface.simple;
+
+public class SimpleMain {
+	public static void main(String[] args) {
+		Parent papa = new Parent("아부지", 60);
+		System.out.println(papa.toString());
+		papa.sayHello();
+		
+		Child baby = new Child();
+		baby.setAge(10);
+		baby.setName("아기");
+		baby.sayHello();
+		System.out.println(baby.toString());
+	}
+
+}

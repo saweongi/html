@@ -1,0 +1,10 @@
+package ch10_extends_interface.ramen;
+
+public class RamenMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,15 @@
+package ch10_extends_interface.starcraft;
+
+public class Zealot extends StarUnit{
+	private int shieId;
+	
+	public Zealot() {
+		super();
+	}
+
+	public Zealot(String name, int damage, int hp, int armor, int shieId) {
+		super(name, damage, hp, armor);
+		
+	}
+	
+}

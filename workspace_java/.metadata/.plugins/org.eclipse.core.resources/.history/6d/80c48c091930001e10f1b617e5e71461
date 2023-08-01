@@ -1,0 +1,8 @@
+package practice.submult01.cafe;
+
+import java.util.ArrayList;
+
+public class Cafe {
+	String name;
+	ArrayList menuList=new ArrayList();
+}

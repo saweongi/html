@@ -1,0 +1,18 @@
+package ch10_extends_interface.starcraft;
+
+public class StarCraftMain {
+
+	public static void main(String[] args) {
+		Marine marine01 = new Marine("마린", 6, 50, 0);
+		Marine marine02 = new Marine();
+		marine01.move(100,200);
+		marine01.stimpack();
+		System.out.println(marine01);
+		System.out.println(marine02);
+		
+		Zealot zealot01 = new Zealot();
+		zealot01.move(10,5);
+		System.out.println(zealot01);
+	}
+
+}

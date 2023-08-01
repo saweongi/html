@@ -43,13 +43,20 @@
     <fullyQualifiedTypeName name="ch09_class.school.Student"/>
     <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
     <fullyQualifiedTypeName name="ch09_class.future.FutureStudent"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="practice.submult01.Account"/>
     <fullyQualifiedTypeName name="ch09_class.quiz.Movie"/>
     <fullyQualifiedTypeName name="ch09_class.quiz.MovieDB"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="ch03_system.SystemMain"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.StarUnit"/>
+    <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.HighTemplar"/>
+    <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.Zealot"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="ch10_extends_interface.ramen.Ramen"/>
+    <fullyQualifiedTypeName name="ch10_extends_interface.ramen.JjaPpagheti"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="practice.submult01.cafe.Coffee"/>
 </qualifiedTypeNameHistroy>

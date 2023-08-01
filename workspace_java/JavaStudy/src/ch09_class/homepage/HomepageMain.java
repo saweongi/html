@@ -38,7 +38,7 @@ public class HomepageMain {
 			{
 				System.out.println("아이디를 입력해주세요");
 				System.out.print(">>>");
-				String id = scanner.next();
+				String id = scanner.nextLine();
 				System.out.println("비밀번호를 입력해주세요");
 				System.out.print(">>> ");
 				String pw =scanner.nextLine();
@@ -77,9 +77,13 @@ public class HomepageMain {
 							 boardDB.selectBoard(no);
 							
 						}else if(select ==3) {
-							// 삭제 내일
+							System.out.println("삭제 글 번호를 입력해주세요");
+							System.out.println(">>> ");
+							int no = Integer.parseInt(scanner.nextLine());
+							boardDB.deleteBoard(no, login.getId());
+						
 						}else if(select ==4) {
-						//로그아웃
+						//로그아웃+
 							break;
 					}
 				
