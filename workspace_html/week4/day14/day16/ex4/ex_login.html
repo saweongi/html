@@ -7,6 +7,42 @@
     <title>Document</title>
     <link rel="stylesheet" href="register.css">
     <!-- 로컬스토리지에 id와 비번이 맞다면 ex_main.html 페이지로 이동 -->
+    <script>
+        function fn_login(){
+    
+            let id = document.getElementById("user-id");
+            let pw = document.getElementById("user-pw");
+            let val = Object.keys(window.localStorage);
+  
+              let id1;
+              let pw1;
+                for(let i=0; i<val.length; i++){
+                    if(val[i]==id.value){
+                        id1 = val[i];
+                       
+                    }
+                }
+                
+                let pw_ch = window.localStorage.getItem(id.value);
+                console.log(pw_ch)
+                if(id.value == id1){
+                    if(pw.value==pw_ch){
+                        window.location.href="ex_main.html";
+                    }else{
+                        alert("비번이 맞는지 확인하세요");
+                        
+                       
+                    }
+                    
+                }else{
+                    alert("아이디가 맞는지 확인하세요");
+                }
+
+                
+            }
+
+        
+    </script>
 </head>
 <body>
     <div id="container">
