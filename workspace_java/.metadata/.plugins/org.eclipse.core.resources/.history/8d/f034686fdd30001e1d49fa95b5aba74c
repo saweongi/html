@@ -1,0 +1,24 @@
+package ch11_java_api;
+
+import java.text.DecimalFormat;
+
+public class ApiFormat {
+
+	public static void main(String[] args) {
+		
+		//숫자 형식 DecimalFormat
+		//자릿수에 맞춰 숫자 앞에 0 붙이기
+		DecimalFormat decinalFormat = new DecimalFormat("000000");
+		System.out.println(decinalFormat.format(1));
+		System.out.println(decinalFormat.format(10));
+		System.out.println(decinalFormat.format(99));
+		System.out.println(decinalFormat.format(88888));
+		
+		
+		// 자리수에 맞춰 소수 뒤에 0붙이기
+		decinalFormat = new DecimalFormat("0.000");
+		System.out.println(decinalFormat.format(12.130));
+
+	}
+
+}

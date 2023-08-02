@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.awt.datatransfer.DataFlavor"/>
-    <fullyQualifiedTypeName name="java.awt.Label"/>
-    <fullyQualifiedTypeName name="java.lang.OutOfMemoryError"/>
-    <fullyQualifiedTypeName name="javax.imageio.metadata.IIOMetadataFormatImpl"/>
-    <fullyQualifiedTypeName name="javax.sound.midi.SysexMessage"/>
-    <fullyQualifiedTypeName name="ch06_Method.MethodMain"/>
-    <fullyQualifiedTypeName name="javax.management.AttributeList"/>
     <fullyQualifiedTypeName name="java.lang.Void"/>
     <fullyQualifiedTypeName name="java.security.PublicKey"/>
     <fullyQualifiedTypeName name="javax.swing.plaf.multi.MultiInternalFrameUI"/>
@@ -48,7 +41,6 @@
     <fullyQualifiedTypeName name="ch09_class.quiz.MovieDB"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="ch03_system.SystemMain"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.StarUnit"/>
     <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.HighTemplar"/>
     <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.Zealot"/>
@@ -59,4 +51,13 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="practice.submult01.cafe.Coffee"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="javax.lang.model.util.SimpleAnnotationValueVisitor14"/>
+    <fullyQualifiedTypeName name="java.util.TimeZone"/>
+    <fullyQualifiedTypeName name="java.util.Locale"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="java.text.DecimalFormat"/>
+    <fullyQualifiedTypeName name="java.text.MessageFormat"/>
 </qualifiedTypeNameHistroy>
