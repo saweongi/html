@@ -1,0 +1,21 @@
+package ch11_java_api;
+
+import java.net.URL;
+
+public class ApiJson {
+
+	public static void main(String[] args) {
+	
+		//https://api.upbit.com/v1/market/all
+		
+		//coin 전체 정보(한글명,영문명,거래코드)
+		String mainUrl = "https://api.upbit.com/v1/market/all";
+		
+		//markets <- 코드값에 해당하는 실시간 상세정보
+		String detailUrl = "https://api.upbit.com/v1/ticker?markets=KRW-BTC";
+		
+		//URL 클래스 원격 자원에 접근
+		URL url = new URL(mainUrl);
+	}
+
+}
