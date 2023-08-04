@@ -1,0 +1,17 @@
+package practice.submult01.cafe1;
+
+
+
+public class CafeMain1 {
+
+	public static void main(String[] args) {
+		Cafe1 starBucks = new Cafe1("스타벅스", "starbuks");
+		starBucks.addCoffee(new Coffee("아메리카노", 5000));
+		starBucks.addCoffee(new Coffee("카푸치노", 6000));
+		starBucks.addCoffee(new Coffee("오곡라떼", 7000));
+		
+		
+		Cafe1 aKa = new Cafe1("아카", "Aka");
+	}
+
+}

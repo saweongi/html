@@ -9,4 +9,6 @@ public class Coffee {
 		this.price = price;
 		
 	}
+
+	
 }
