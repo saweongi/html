@@ -25,17 +25,17 @@ public class CafeMain1 {
 			case 1:
 				starBucks.ShowMenu();
 				
-				Scanner coffeChoicel = new Scanner(System.in);
-		
-				starBucks.buyCoffee(coffeChoicel);
+				int coffeChoicel = scanner.nextInt();
+				
+				starBucks.buyCoffee(coffeChoicel-1);
 				break;
 				
 			case 2:
 				aKaCafe.ShowMenu();
 				
-				Scanner coffeChoicel2 =  new Scanner(System.in);
+				int coffeChoicel2 = scanner.nextInt();
 				
-				aKaCafe.buyCoffee(coffeChoicel2);
+				aKaCafe.buyCoffee(coffeChoicel2-1);
 				break;	
 			
 			case 3:

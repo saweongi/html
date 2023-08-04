@@ -33,7 +33,7 @@ public class CafeMain1 {
 			case 2:
 				aKaCafe.ShowMenu();
 				
-				Scanner coffeChoicel2 =  new Scanner(System.in);
+				int coffeChoicel2 = scanner.nextInt();
 				
 				aKaCafe.buyCoffee(coffeChoicel2);
 				break;	

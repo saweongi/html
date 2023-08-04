@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
     <fullyQualifiedTypeName name="java.util.concurrent.atomic.AtomicIntegerArray"/>
     <fullyQualifiedTypeName name="ch08_collection.CollectionList"/>
@@ -37,9 +35,6 @@
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="ch10_extends_interface.ramen.Ramen"/>
     <fullyQualifiedTypeName name="ch10_extends_interface.ramen.JjaPpagheti"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="practice.submult01.cafe.Coffee"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="javax.lang.model.util.SimpleAnnotationValueVisitor14"/>
     <fullyQualifiedTypeName name="java.util.TimeZone"/>
@@ -52,7 +47,6 @@
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.net.URL"/>
     <fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
@@ -60,4 +54,10 @@
     <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
     <fullyQualifiedTypeName name="ch11_java_api.ApiJson"/>
     <fullyQualifiedTypeName name="org.json.simple.parser.JSONParser"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="practice.submult01.cafe1.Cafe1"/>
+    <fullyQualifiedTypeName name="practice.submult01.cafe.Coffee"/>
+    <fullyQualifiedTypeName name="practice.submult01.cafe1.Coffee1"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
