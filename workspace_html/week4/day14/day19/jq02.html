@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = https://code.jquery.com/jquery-3.7.0.js></script>
+    <script>
+        $(document).ready(()=>{
+                $("#btn").click(function(){
+                    $("#apple").animate({left : "100px"});
+                });
+                $("#btn").dblclick(function(){
+                    $("#apple").animate({left:"0px"});
+                });
+                $("#fadeIn").click(function(){
+                    
+                    //메소드 체이닝
+                        $("#banana").slideDown("fast").fadeIn("slow");
+                });
+                $("#fadeOut").click(function(){
+                        $("#banana").fadeOut("slow");
+                });
+                $("#btn2").click(function(){
+                    alert($("apple").attr("src"));
+                });
+                $("#btn3").click(function(){
+                    $("#apple").attr("src","../../../week3/day9/day11/img/복숭아.PNG");
+                });
+        });
+
+
+    </script>
+</head>
+<body>
+    <button id="btn">animate()</button>
+    <button id ="btn2">get attr()</button>
+    <button id ="btn3"> change src</button>
+    <img src="../../../week3/day9/day11/img/사과.PNG" id="apple" widht ="80" height="80" style="position: relative;" alt="">
+    <button id="fadeIn">fadein</button>
+    <button id="fadeOut">fadeout</button>
+    <img src="../../../week3/day9/day11/img/복숭아.PNG" id="banana" widht ="80" height="80" style="position: relative;" alt="">
+</body>
+</html>
