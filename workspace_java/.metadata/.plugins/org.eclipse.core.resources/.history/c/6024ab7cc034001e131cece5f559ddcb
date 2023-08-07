@@ -1,0 +1,23 @@
+package ch12_exception;
+
+public class ExceptionMain {
+
+	public static void main(String[] args) {
+		System.out.println("메인 시작");
+		int[] intArr = {1, 2, 3};
+		try {
+			System.out.println(intArr[3]);
+		} catch (Exception e) {
+			
+			//printStackTrace 오류출력
+			e.printStackTrace();
+			System.err.println("오류 났어!!!");
+			System.out.println("오류 났을때 처리구간");
+		}
+		
+			System.out.println("메인 종료 ");
+		
+
+	}
+
+}
