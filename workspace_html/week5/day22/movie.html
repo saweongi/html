@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일별 박스오피스</title>
+    <script src=https://code.jquery.com/jquery-3.7.0.js></script>
+    <script>
+        $(document).ready(function () {
+            let api_url = 'http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json'
+            const api_key = '7f7314005c9a1bb8ee535cedbd043a27'
+            $('#btn').click(function () {
+                let dt = $('#st').val().replaceAll('-', '');
+                alert(dt);
+                $.ajax({
+                    url: api_url
+                    , type: 'GET'
+                    , data: { key: api_key, targetDt: dt }
+                    , dataType: 'json'
+                    , success: function (res) {
+                        let arr = res['boxOfficeResult']['dailyBoxOfficeList'];
+                        $('#tb').append("<tr> v['rank'] <th>순위</th> v['movieCd'] <th>영화코드</th> v['movieNm']<th> 영화명</th> v['openDt']<th> 개봉일</th> v['salesAmt']<th> 매출액</th> v['salesAcc'] <th>누적매출액</th>  v['audiCnt'] <th>관객수</th> v['audiAcc'] <th>누적관객수</th> v['scrnCnt'] <th>당일자스크린수</th> v['showCnt'] <th>해당일자상영횟수</th> </tr>");
+
+
+                        $.each(arr, function (i, v) {
+                            console.log(i, v['movieNm']);
+                            let str = '';
+                            str += '<tr>';
+                            str += '<td>' + v['rank'] + '</td>';
+                            str += '<td>' + v['movieCd'] + '</td>';
+                            str += '<td>' + v['movieNm'] + '</td>';
+                            str += '<td>' + v['openDt'] + '</td>';
+                            str += '<td>' + v['salesAmt'] + '</td>';
+                            str += '<td>' + v['salesAcc'] + '</td>';
+                            str += '<td>' + v['audiCnt'] + '</td>';
+                            str += '<td>' + v['audiAcc'] + '</td>';
+                            str += '<td>' + v['scrnCnt'] + '</td>';
+                            str += '<td>' + v['showCnt'] + '</td>';
+                            str += '</tr>';
+                            $('#tb').append(str);
+
+                        })
+                    }, error(e) {
+                        alert(e);
+                    }
+                })
+            });
+
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <input type="date" name="" id="st">
+    <button id="btn">조회</button>
+    <table id="tb">
+    </table>
+</body>
+
+</html>

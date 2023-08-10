@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src=https://code.jquery.com/jquery-3.7.0.js></script>
+    <script>
+        var api_url = 'http://apis.data.go.kr/1160100/service/GetStocDiviInfoService/getDiviInfo'; /*URL*/
+        let api_key = 'UXn/y+dEOiENSDvUdjJIB2r9DeOUcKDHYANERKwSklm50LoFU1kuXPoJ7d3gqKCZCh5kRFbHHAMxerQ8eIuznQ=='
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                let rows = $('#rows').val();
+                let page = $('#page').val();
+                let search = $('#search').val();
+                $.ajax({
+                    url : api_url
+                    ,type : 'GET'
+                    ,dataType : 'xml'
+                    ,data : {serviceKey : api_key 
+                             , numOfRows : rows
+                            , pageNo : page
+                            ,isinCdNm : search}
+                            ,success: function(res){
+                                let cnt = $(res).find('totalCount').text();
+                                console.log(res);
+                                $(res).find('item').each(function(){
+                                    let item = $(this);
+                                    let nm = item.find('isinCdNm').text();
+                                    let lat = item.find('isinCd').text();
+                                    let lon = item.find('scrsItmsKcdNm').text();
+                                    let addr = item.find('stckDvdnRcdNm').text();
+                                 
+                                        console.log(nm, lat, lon, addr);
+                                 
+                                    
+                        
+                                })
+            
+                            },error(e){
+                                console.log(e);
+                            }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    
+    <input type="text" id="rows" value="3">
+    <input type="text" id="page" value="1">
+    <input type="text" id="search" value="삼성전자">
+    <button id="btn">가져오기</button>
+</body>
+</html>
