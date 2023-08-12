@@ -32,7 +32,7 @@ select emp_name
     ,salary
     ,department_id
 from employees;
-WHENEVER salary >=12000
+where salary >=12000
 ORDER BY department_id DESC;
 
 select emp_name
