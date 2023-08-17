@@ -6,6 +6,7 @@ FROM 수강내역;
 
 select *
 from 과목;
+
 SELECT 학생.학번 -- 둘다 있으면 앞에 테이블 꺼를 붙여주지만 하나씩 가지고 있으면 안써줘도됨
     ,이름
     ,전공
@@ -44,7 +45,7 @@ select 학생.학번
     ,count(수강내역.수강내역번호) as 수강이력건수
 from 학생,수강내역
 where 학생.학번 = 수강내역.학번(+)
-group by 학생.이름
+group by 학생학번 ,학생.이름
 order by 3 desc;
 
 --학생의 수강이력 건수, 총수강 학점을 출력하시오
@@ -139,7 +140,31 @@ from(
 where 순위  BETWEEN 1 AND 5;
 
 
+-- MEMBER, CART, PROD 를 사용하여 
+-- 고객별 카트사용횟수, 상품품목건수, 상품구매수량, 총구매금액을 출력하시오
+-- 구매이력이 없다면 0 <- 으로 출력되도록
 
+SELECT *
+FROM MEMBER;
+
+SELECT *
+FROM  CART;
+
+SELECT *
+FROM  PROD;
+
+SELECT MEMBER.mem_id,
+    member.mem_name
+    ,  count( DISTINCT cart_no) as 카트사용횟수
+    ,count(cart.cart_qty) as 상품품목건수
+    ,NVL(sum(cart.cart_qty),0)as 상품구매수량
+    , NVL(sum(cart.cart_qty*prod.prod_sale),0) as 구매합산금액
+
+FROM MEMBER, CART, PROD
+where member.mem_id = cart.cart_member(+)
+and cart.cart_prod =prod.prod_id(+)
+group by member.mem_name,MEMBER.mem_id
+order by 구매합산금액 desc; 
     
 
 
