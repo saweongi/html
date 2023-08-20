@@ -79,7 +79,7 @@ where country = '일본';
 SELECT goods
 FROM exp_goods_asia
 where country = '한국'
-INTERSECT  --차집합(위에꺼에서 아래꺼 뺌)
+except --차집합(위에꺼에서 아래꺼 뺌)
 SELECT goods
 FROM exp_goods_asia
 where country = '일본';
