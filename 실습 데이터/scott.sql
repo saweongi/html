@@ -1,31 +1,34 @@
-SELECT 'Oracle',
-    LPAD('Oracle',10,'#') AS LPAD_1,
-    rpad('Oracle',10,'*') AS RPAD_2,
-    LPAD('Oracle',10) AS LPAD_2,
-    RPAD('Oracle',10) AS RPAD_2
-    FROM DUAL;
-    
-    
-SELECT
-    RPAD('971225-',14,'*') AS RPAD_JMNO,
-    RPAD('010-1234-',13,'*')AS RPAD_PHONE
-    FROM DUAL;
-    
+SELECT TO_CHAR(SYSDATE, 'YYYY/MM/DD/ HH24:MI:SS') AS 현재날짜시간
+FROM DUAL;
 
-SELECT CONCAT(EMPNO, ENAME),
-CONCAT(EMPNO, CONCAT(' : ',ENAME))
-FROM EMP
-WHERE ENAME = 'SCOTT';
+SELECT SYSDATE,
+TO_CHAR(SYSDATE, 'MM') AS MM
+,TO_CHAR(SYSDATE, 'MON') AS MON
+,TO_CHAR(SYSDATE, 'MONTH') AS MONTH
+,TO_CHAR(SYSDATE, 'DD') AS DD
+,TO_CHAR(SYSDATE, 'DY') AS DY
+,TO_CHAR(SYSDATE, 'DAY') AS DAY
+FROM DUAL;
 
-SELECT '[' || TRIM(' _ _Oracle_ _ ') || ']' AS TRIM,
-       '[' || TRIM(LEADING FROM ' _ _Oracle_ _ ') || ']' AS TRIM_LEADING,
-       '[' || TRIM(TRAILING FROM ' _ _Oracle_ _ ') || ']' AS TRIM_TRAILING,
-       '[' || TRIM(BOTH '_' FROM '_ _Oracle_ _') || ']' AS TRIM_BOTH
-       FROM DUAL;
-       
-SELECT '[' || TRIM(' _Oracle_ ') || ']' AS TRIM,
-       '[' || LTRIM(' _Oracle_ ') || ']' AS LTRIM,
-       '[' || RTRIM(' _Oracle_ ') || ']' AS RTRIM,
-       '[' || LTRIM('<_Oracle_>', '_<') || ']' AS LTRIM,
-       '[' || RTRIM('<_Oracle_>', '_>') || ']' AS RTRIM
-    FROM DUAL;
+SELECT EMPNO, ENAME, SAL, COMM, SAL+COMM
+, NVL(COMM,0)
+, SAL+NVL(COMM,0)
+FROM EMP;
+
+SELECT EMPNO, ENAME, JOB, SAL,
+    DECODE(JOB,'MANAGER',SAL*1.1,'SALESMAN',SAL*1.05,'ANALYST',SAL,SAL*1.03)AS UPSAL
+    FROM EMP;
+    
+SELECT EMPNO, ENAME, JOB, SAL,
+    CASE JOB
+    WHEN 'MANAGER' THEN SAL*1.1
+    WHEN 'SALESMAN' THEN SAL*1.05
+    WHEN 'ANALYST' THEN SAL
+    ELSE SAL*1.03
+    END AS UPSAL
+    FROM EMP; 
+    
+SELECT SUM(SAL)
+FROM EMP;
+
+
