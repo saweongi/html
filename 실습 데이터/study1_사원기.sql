@@ -1,28 +1,28 @@
--- 1ë²ˆ ë¬¸ì œ 
+-- 1¹ø ¹®Á¦ 
 select *
 from customer
-where customer.job in('ìì˜ì—…','ì˜ì‚¬') and  to_number(substr(customer.birth,1,4)) >= 1988
+where customer.job in('ÀÚ¿µ¾÷','ÀÇ»ç') and  to_number(substr(customer.birth,1,4)) >= 1988
 order by customer.birth desc;
 
--- 2ë²ˆë¬¸ì œ 
+-- 2¹ø¹®Á¦ 
 select customer_name
     ,phone_number
 from customer ,address
 where customer.zip_code = address.zip_code
-and address.address_detail ='ê°•ë‚¨êµ¬';
+and address.address_detail ='°­³²±¸';
 
---3ë²ˆ ë¬¸ì œ 
+--3¹ø ¹®Á¦ 
 select customer.job
-    ,count(customer.job) as ì§ì›ìˆ˜ 
+    ,count(customer.job) as Á÷¿ø¼ö 
 from customer
 having count(customer.job) >=1
 group by customer.job
 order by 2 desc;
 
 
--- 4-1 ë¬¸ì œ 
-select TO_CHAR(customer.first_reg_date,'day') as ìš”ì¼
-        ,count(TO_CHAR(customer.first_reg_date,'day')) as ê±´ìˆ˜
+-- 4-1 ¹®Á¦ 
+select TO_CHAR(customer.first_reg_date,'day') as ¿äÀÏ
+        ,count(TO_CHAR(customer.first_reg_date,'day')) as °Ç¼ö
 from customer 
 group by TO_CHAR(customer.first_reg_date,'day')
 having count(TO_CHAR(customer.first_reg_date,'day')) = (select max(count(TO_CHAR(customer.first_reg_date,'day')))
@@ -30,16 +30,16 @@ having count(TO_CHAR(customer.first_reg_date,'day')) = (select max(count(TO_CHAR
                                                         group by TO_CHAR(customer.first_reg_date,'day'));
                                                         
                 
--- 4-2ë²ˆ ë¬¸ì œ 
+-- 4-2¹ø ¹®Á¦ 
 select  
-    nvl(DECODE(customer.sex_code, 'M','ë‚¨ì','F','ì—¬ì','ë¯¸ë“±ë¡'),'í•©ê³„') AS gender
-     , count(DECODE(customer.sex_code, 'M','ë‚¨ì','F','ì—¬ì','ë¯¸ë“±ë¡')) AS cnt
+    nvl(DECODE(customer.sex_code, 'M','³²ÀÚ','F','¿©ÀÚ','¹Ìµî·Ï'),'ÇÕ°è') AS gender
+     , count(DECODE(customer.sex_code, 'M','³²ÀÚ','F','¿©ÀÚ','¹Ìµî·Ï')) AS cnt
 from customer
-group by  rollup (DECODE(customer.sex_code, 'M','ë‚¨ì','F','ì—¬ì','ë¯¸ë“±ë¡'));
+group by  rollup (DECODE(customer.sex_code, 'M','³²ÀÚ','F','¿©ÀÚ','¹Ìµî·Ï'));
 
---  5ë²ˆë¬¸ì œ 
-select substr(substr(reservation.reserv_date,5),1,2) as ì›”
-        ,count(reservation.cancel) as ì·¨ì†Œê±´ìˆ˜ 
+--  5¹ø¹®Á¦ 
+select substr(substr(reservation.reserv_date,5),1,2) as ¿ù
+        ,count(reservation.cancel) as Ãë¼Ò°Ç¼ö 
 from reservation
 where reservation.cancel ='Y'
 group by substr(substr(reservation.reserv_date,5),1,2)
