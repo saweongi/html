@@ -1,28 +1,28 @@
--- 1¹ø ¹®Á¦ 
+-- 1ë²ˆ ë¬¸ì œ 
 select *
 from customer
-where customer.job in('ÀÚ¿µ¾÷','ÀÇ»ç') and  to_number(substr(customer.birth,1,4)) >= 1988
+where customer.job in('ìì˜ì—…','ì˜ì‚¬') and  to_number(substr(customer.birth,1,4)) >= 1988
 order by customer.birth desc;
 
--- 2¹ø¹®Á¦ 
+-- 2ë²ˆë¬¸ì œ 
 select customer_name
     ,phone_number
 from customer ,address
 where customer.zip_code = address.zip_code
-and address.address_detail ='°­³²±¸';
+and address.address_detail ='ê°•ë‚¨êµ¬';
 
---3¹ø ¹®Á¦ 
+--3ë²ˆ ë¬¸ì œ 
 select customer.job
-    ,count(customer.job) as Á÷¿ø¼ö 
+    ,count(customer.job) as ì§ì›ìˆ˜ 
 from customer
 having count(customer.job) >=1
 group by customer.job
 order by 2 desc;
 
 
--- 4-1 ¹®Á¦ 
-select TO_CHAR(customer.first_reg_date,'day') as ¿äÀÏ
-        ,count(TO_CHAR(customer.first_reg_date,'day')) as °Ç¼ö
+-- 4-1 ë¬¸ì œ 
+select TO_CHAR(customer.first_reg_date,'day') as ìš”ì¼
+        ,count(TO_CHAR(customer.first_reg_date,'day')) as ê±´ìˆ˜
 from customer 
 group by TO_CHAR(customer.first_reg_date,'day')
 having count(TO_CHAR(customer.first_reg_date,'day')) = (select max(count(TO_CHAR(customer.first_reg_date,'day')))
@@ -30,24 +30,60 @@ having count(TO_CHAR(customer.first_reg_date,'day')) = (select max(count(TO_CHAR
                                                         group by TO_CHAR(customer.first_reg_date,'day'));
                                                         
                 
--- 4-2¹ø ¹®Á¦ 
+-- 4-2ë²ˆ ë¬¸ì œ 
 select  
-    nvl(DECODE(customer.sex_code, 'M','³²ÀÚ','F','¿©ÀÚ','¹Ìµî·Ï'),'ÇÕ°è') AS gender
-     , count(DECODE(customer.sex_code, 'M','³²ÀÚ','F','¿©ÀÚ','¹Ìµî·Ï')) AS cnt
+    nvl(DECODE(customer.sex_code, 'M','ë‚¨ì','F','ì—¬ì','ë¯¸ë“±ë¡'),'í•©ê³„') AS gender
+     , count(DECODE(customer.sex_code, 'M','ë‚¨ì','F','ì—¬ì','ë¯¸ë“±ë¡')) AS cnt
 from customer
-group by  rollup (DECODE(customer.sex_code, 'M','³²ÀÚ','F','¿©ÀÚ','¹Ìµî·Ï'));
+group by  rollup (DECODE(customer.sex_code, 'M','ë‚¨ì','F','ì—¬ì','ë¯¸ë“±ë¡'));
 
---  5¹ø¹®Á¦ 
-select substr(substr(reservation.reserv_date,5),1,2) as ¿ù
-        ,count(reservation.cancel) as Ãë¼Ò°Ç¼ö 
+--  5ë²ˆë¬¸ì œ 
+select substr(substr(reservation.reserv_date,5),1,2) as ì›”
+        ,count(reservation.cancel) as ì·¨ì†Œê±´ìˆ˜ 
 from reservation
 where reservation.cancel ='Y'
 group by substr(substr(reservation.reserv_date,5),1,2)
 order by 2 desc;
 
+select *
+from address;
 
+select *
+from customer;
 
+select *
+from item;
 
+select *
+from reservation;
 
+select *
+from order_info;
 
+ -- 6ë²ˆë¬¸ì œ
+select product_name
+    ,sum(price * quantity) as ìƒí’ˆë§¤ì¶œ
+from item,order_info
+where item.item_id = order_info.item_id
+group by product_name
+order by 2 desc;
+
+desc order_info;
+
+--7ë²ˆ ë¬¸ì œ
+select substr(reserv_no,1,6) as ë§¤ì¶œì›”
+ ,sum(Decode (item.item_id,'M0001',sales,0)) AS SPECIAL_SET
+ ,sum(Decode (item.item_id,'M0002',sales,0)) AS PASTA
+ ,sum(Decode (item.item_id,'M0003',sales,0)) AS PIZZA
+,sum(Decode (item.item_id,'M0004',sales,0)) AS SEA_FOOD
+,sum(Decode (item.item_id,'M0005',sales,0)) AS STEAK
+,sum(Decode (item.item_id,'M0006',sales,0)) AS SALAD_BAR
+,sum(Decode (item.item_id,'M0007',sales,0)) AS SALAD
+,sum(Decode (item.item_id,'M0008',sales,0)) AS SANDWICH
+,sum(Decode (item.item_id,'M0009',sales,0)) AS WINE
+,sum(Decode (item.item_id,'M0010',sales,0)) AS JUICE
+from order_info,item
+where item.item_id = order_info.item_id
+group by substr(reserv_no,1,6)
+order by 1;
 
