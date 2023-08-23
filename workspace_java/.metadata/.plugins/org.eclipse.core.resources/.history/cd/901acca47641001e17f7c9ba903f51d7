@@ -1,0 +1,5 @@
+package ch10_extends_interface.papacar;
+
+public interface Vehicle {
+
+}

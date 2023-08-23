@@ -62,7 +62,8 @@ FROM dual;
     ,TRUNC(114.999, 1)
 FROM dual;
 
-/* MODE(m ,n) m을 n으로 나누었을때 나머지 반환 */
+/* MO
+(m ,n) m을 n으로 나누었을때 나머지 반환 */
 -- SQRT 제곱근 반환
 SELECT MOD(4,2)
  ,MOD(5,2)
