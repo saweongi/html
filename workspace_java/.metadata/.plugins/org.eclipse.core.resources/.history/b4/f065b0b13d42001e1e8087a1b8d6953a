@@ -1,0 +1,10 @@
+package ch13_thread;
+
+//thread 사용 방법(1) 상속받아서
+public class ExThrea extends Thread{
+	int num;
+	public ExThread(int num , String name) {
+		
+	}
+
+}

@@ -1,6 +1,6 @@
- -- 6ë²ˆë¬¸ì œ
+ -- 6¹ø¹®Á¦
 select product_name
-    ,sum(price * quantity) as ìƒí’ˆë§¤ì¶œ
+    ,sum(price * quantity) as »óÇ°¸ÅÃâ
 from item,order_info
 where item.item_id = order_info.item_id
 group by product_name
@@ -8,8 +8,8 @@ order by 2 desc;
 
 desc order_info;
 
---7ë²ˆ ë¬¸ì œ
-select substr(reserv_no,1,6) as ë§¤ì¶œì›”
+--7¹ø ¹®Á¦
+select substr(reserv_no,1,6) as ¸ÅÃâ¿ù
  ,sum(Decode (item.item_id,'M0001',sales,0)) AS SPECIAL_SET
  ,sum(Decode (item.item_id,'M0002',sales,0)) AS PASTA
  ,sum(Decode (item.item_id,'M0003',sales,0)) AS PIZZA
@@ -25,16 +25,16 @@ where item.item_id = order_info.item_id
 group by substr(reserv_no,1,6)
 order by 1;
 
---8ë²ˆë¬¸ì œ
+--8¹ø¹®Á¦
 select substr(reserv_no,1,6)
 ,product_name
-,sum(Decode(to_char(to_date(substr(reserv_no,1,8),'yyyymmdd'),'d'),'1',sales,0)) as ì¼ìš”ì¼
-,sum(Decode(to_char(to_date(substr(reserv_no,1,8),'yyyymmdd'),'d'),'2',sales,0)) as ì›”ìš”ì¼
-,sum(Decode(to_char(to_date(substr(reserv_no,1,8),'yyyymmdd'),'d'),'3',sales,0)) as í™”ìš”ì¼
-,sum(Decode(to_char(to_date(substr(reserv_no,1,8),'yyyymmdd'),'d'),'4',sales,0)) as ìˆ˜ìš”ì¼
-,sum(Decode(to_char(to_date(substr(reserv_no,1,8),'yyyymmdd'),'d'),'5',sales,0)) as ëª©ìš”ì¼
-,sum(Decode(to_char(to_date(substr(reserv_no,1,8),'yyyymmdd'),'d'),'6',sales,0)) as ê¸ˆìš”ì¼
-,sum(Decode(to_char(to_date(substr(reserv_no,1,8),'yyyymmdd'),'d'),'7',sales,0)) as í† ìš”ì¼
+,sum(Decode(to_char(to_date(substr(reserv_no,1,8),'yyyymmdd'),'d'),'1',sales,0)) as ÀÏ¿äÀÏ
+,sum(Decode(to_char(to_date(substr(reserv_no,1,8),'yyyymmdd'),'d'),'2',sales,0)) as ¿ù¿äÀÏ
+,sum(Decode(to_char(to_date(substr(reserv_no,1,8),'yyyymmdd'),'d'),'3',sales,0)) as È­¿äÀÏ
+,sum(Decode(to_char(to_date(substr(reserv_no,1,8),'yyyymmdd'),'d'),'4',sales,0)) as ¼ö¿äÀÏ
+,sum(Decode(to_char(to_date(substr(reserv_no,1,8),'yyyymmdd'),'d'),'5',sales,0)) as ¸ñ¿äÀÏ
+,sum(Decode(to_char(to_date(substr(reserv_no,1,8),'yyyymmdd'),'d'),'6',sales,0)) as ±Ý¿äÀÏ
+,sum(Decode(to_char(to_date(substr(reserv_no,1,8),'yyyymmdd'),'d'),'7',sales,0)) as Åä¿äÀÏ
 from item,order_info
 where item.item_id=order_info.item_id
 and item.item_id ='M0001'
@@ -52,7 +52,7 @@ from item;
 select *
 from reservation;
 
---9ë²ˆë¬¸ì œ
+--9¹ø¹®Á¦
 select ADDRESS_DETAIL
   , count(distinct reservation.customer_id)
 from  address,customer,reservation
@@ -61,3 +61,54 @@ and customer.customer_id = reservation.customer_id
 and reservation.cancel ='N'
 group by ADDRESS_DETAIL
 order by 2 desc;
+
+------------------------------------------------
+----  °í°´º° ÁöÁ¡(branch) ¹æ¹®È½¼ö¿Í ¹æ¹®°´ÀÇ ÇÕÀ» Ãâ·ÂÇÏ½Ã¿À.
+-- ¹æ¹®È½¼ö°¡ 4¹ø ÀÌ»óÇÕ Ãâ·ÂÇÏ½Ã¿À(¿¹¾àÃë¼Ò°Ç Á¦¿Ü)
+
+select *
+from address;
+
+select *
+from customer;
+
+select *
+from item;
+
+select *
+from reservation;
+
+select reservation.customer_id,customer_name,branch,count(visitor_cnt) as ¹æ¹®È½¼ö,sum(visitor_cnt) as ¹æ¹®°´¼ö
+from reservation,customer
+where reservation.customer_id = customer.customer_id
+and reservation.cancel = 'N'
+having count(visitor_cnt) >=4
+group by reservation.customer_id,customer_name,branch
+order by ¹æ¹®È½¼ö desc, ¹æ¹®°´¼ö desc;
+
+--°¡Àå ¹æ¹®À» ¸¹ÀÌ ÇÑ °í°´ÀÇ ±×µ¿ÇÑ ±¸¸ÅÇÑ Ç°¸ñº° ÇÕ»ê±Ý¾×À» Ãâ·ÂÇÏ½Ã¿À
+-- W1338910
+SELECT reserv_no
+FROM reservation
+WHERE cancel = 'N'
+AND customer_id='W1338910';
+
+SELECT (SELECT product_name FROM item WHERE item_id = a.item_id) as category
+    , SUM(a.sales) as ±¸¸ÅÇÕ°è
+FROM order_info a
+WHERE reserv_no IN(SELECT reserv_no
+FROM reservation
+WHERE cancel = 'N'
+AND customer_id=(select  customer_id
+from(select reservation.customer_id,customer_name,branch,count(visitor_cnt) as ¹æ¹®È½¼ö,sum(visitor_cnt) as ¹æ¹®°´¼ö
+from reservation,customer
+where reservation.customer_id = customer.customer_id
+and reservation.cancel = 'N'
+group by reservation.customer_id,customer_name,branch
+order by ¹æ¹®È½¼ö desc, ¹æ¹®°´¼ö desc
+)
+where rownum <=1))
+group by item_id;
+
+
+

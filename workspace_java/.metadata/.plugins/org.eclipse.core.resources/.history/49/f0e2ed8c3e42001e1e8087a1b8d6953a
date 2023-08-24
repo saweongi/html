@@ -1,0 +1,29 @@
+package ch13_thread;
+
+public class TreadMain {
+public static void main(String[] args) {
+	//printTest(20);
+//	printTest(100);
+	//쓰레드를 나눠주지 않으면
+	//메인스레드 하나만 일을해서 위에서부터 차례대로 실행됨.
+	//하나가 끝나야 다음껏도 시작함
+	System.out.println("[메인 스레드] 카운터시작~");
+	ExThread thread1 =new ExThread(20, "worker1");
+	thread1.start(); // run에 정의되어있는 작업시작
+	ExThread thread2 = new ExThread(100, "worker2")
+	System.out.println("[메인 스레드] 종료 ~");
+}
+	public static void printTest(int num) {
+		for(int i= num; i<=num; i++) {
+			System.out.println(i);
+			
+			//Tread.sleep() // 현재 실행중인 스레드를 멈추는것
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}
+

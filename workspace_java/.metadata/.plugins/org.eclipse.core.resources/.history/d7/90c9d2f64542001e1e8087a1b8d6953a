@@ -1,0 +1,10 @@
+package ch13_thread.Issac;
+
+public class IssacMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
