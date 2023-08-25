@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="ch09_class.school.StudentMain"/>
-    <fullyQualifiedTypeName name="ch09_class.school.Student"/>
-    <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
-    <fullyQualifiedTypeName name="ch09_class.future.FutureStudent"/>
-    <fullyQualifiedTypeName name="practice.submult01.Account"/>
-    <fullyQualifiedTypeName name="ch09_class.quiz.Movie"/>
-    <fullyQualifiedTypeName name="ch09_class.quiz.MovieDB"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="ch03_system.SystemMain"/>
     <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.StarUnit"/>
     <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.HighTemplar"/>
@@ -35,7 +27,6 @@
     <fullyQualifiedTypeName name="practice.submult01.cafe.Coffee"/>
     <fullyQualifiedTypeName name="practice.submult01.cafe1.Coffee1"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="org.json.simple.JSONArray"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="org.json.simple.JSONObject"/>
@@ -45,10 +36,8 @@
     <fullyQualifiedTypeName name="ch12_exception.BizException"/>
     <fullyQualifiedTypeName name="ch12_exception.ExMethod"/>
     <fullyQualifiedTypeName name="ch10_extends_interface.papacar.Vehicle"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="ch13_thread.Issac.Customer"/>
     <fullyQualifiedTypeName name="ch13_thread.Issac.Chef"/>
@@ -57,7 +46,18 @@
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="ch14_jdbc_conn.jdbc.ConnectionFactory"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
-    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+    <fullyQualifiedTypeName name="ch14_jdbc_conn.jdbc.ConnectionPool"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="ch14_jdbc_conn.service.UserService"/>
+    <fullyQualifiedTypeName name="ch14_jdbc_conn.model.UserVO"/>
+    <fullyQualifiedTypeName name="ch14_jdbc_conn.dao.UserDao"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="ch14_jdbc_conn.model.BbsVO"/>
 </qualifiedTypeNameHistroy>

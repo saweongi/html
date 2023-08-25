@@ -46,6 +46,9 @@ public class ConnectionFactory {
         Connection conn = DriverManager.getConnection(url, id, pw);
         return conn;
     }
+    public int getMaxConn() {
+    	return maxConn;
+    }
 
     public static void main(String[] args) {
         ConnectionFactory test = ConnectionFactory.getInstance();

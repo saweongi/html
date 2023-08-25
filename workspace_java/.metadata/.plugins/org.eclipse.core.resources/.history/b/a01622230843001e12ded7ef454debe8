@@ -1,0 +1,19 @@
+package ch14_jdbc_conn.jdbc;
+
+import java.sql.Connection;
+//connectionFactory 로 부터 maxConn 수량만큼
+//connection 객체를 미리 생성해서 풀(pool)에 보관 관리 하는 클래스
+import java.util.Vector;
+
+public class ConnerctionPool {
+	
+	//Vector: 동기화(Synchronized)가 적용된 ArrayList
+	private static Vector<Connection> pool = new Vector<>();
+	private static ConnectionPool instance = new ConnectionPool();
+	
+	//싱글폰
+	public static ConnectionPool getInstance() {
+		if(pool.size == 0) {
+	}
+
+}

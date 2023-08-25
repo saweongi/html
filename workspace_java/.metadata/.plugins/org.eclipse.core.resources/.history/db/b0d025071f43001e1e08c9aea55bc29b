@@ -1,0 +1,12 @@
+package ch14_jdbc_conn.model;
+
+public class BbsVO {
+	private int bbsNo;
+	private	int parentNo;
+	private	String bbsTitle ;
+	private	String bbsContent;
+	private	String authorId;
+	private	String createDt;
+	private	String updateDt;
+	
+}
