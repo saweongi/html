@@ -6,8 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="url"/>
+		<item key="selection" value="getBbs"/>
 		<list key="findhistory">
+			<item value="getBbs"/>
+			<item value="bbs"/>
+			<item value="bbsDetail"/>
+			<item value="OutVO"/>
 			<item value="url"/>
 			<item value="package ch11_java_api;"/>
 			<item value="stuList"/>
@@ -18,6 +22,8 @@
 			<item value="package ch05_control;"/>
 		</list>
 		<list key="replacehistory">
+			<item value="bbsContent"/>
+			<item value="BbsVO"/>
 			<item value=":"/>
 			<item value=""/>
 			<item value="z"/>

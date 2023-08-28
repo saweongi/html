@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="ch03_system.SystemMain"/>
-    <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.StarUnit"/>
-    <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.HighTemplar"/>
-    <fullyQualifiedTypeName name="ch10_extends_interface.starcraft.Zealot"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="ch10_extends_interface.ramen.Ramen"/>
-    <fullyQualifiedTypeName name="ch10_extends_interface.ramen.JjaPpagheti"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="javax.lang.model.util.SimpleAnnotationValueVisitor14"/>
-    <fullyQualifiedTypeName name="java.util.TimeZone"/>
-    <fullyQualifiedTypeName name="java.util.Locale"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="java.text.MessageFormat"/>
@@ -43,7 +32,6 @@
     <fullyQualifiedTypeName name="ch13_thread.Issac.Chef"/>
     <fullyQualifiedTypeName name="java.util.Properties"/>
     <fullyQualifiedTypeName name="java.io.InputStream"/>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="ch14_jdbc_conn.jdbc.ConnectionFactory"/>
     <fullyQualifiedTypeName name="java.util.Vector"/>
@@ -52,12 +40,24 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="ch14_jdbc_conn.service.UserService"/>
     <fullyQualifiedTypeName name="ch14_jdbc_conn.model.UserVO"/>
     <fullyQualifiedTypeName name="ch14_jdbc_conn.dao.UserDao"/>
     <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="ch14_jdbc_conn.model.BbsVO"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="ch03_system.SystemMain"/>
+    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="ch14_jdbc_conn.model.OutVO"/>
 </qualifiedTypeNameHistroy>

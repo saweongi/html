@@ -1,0 +1,37 @@
+package ch15_inout;
+
+import java.io.File;
+
+public class FileBasic {
+	public static void main(String[] args) {
+		
+		//현재 디렉토리 경로가져오기
+		String path = System.getProperty("user.dir");
+		System.out.println(path);
+		
+		//경로 파일리스트 출력
+		File currentFile = new File(path+ "/src");
+		File[] files = currentFile.listFiles();  //현재 경로에있는 파일들을 다 가져옴
+		for(int i = 0; i< files.length; i++) {
+			
+			//경로가 포함 되어있는 파일명
+			System.out.println(files[i]);
+			
+			//파일명만 출력
+			System.out.println(files[i].getName());
+		}
+		
+		//폴더인지 체크
+		System.out.println(files[0].isDirectory()); //폴더면 true를 반환
+		
+		//파일인지 체크
+		System.out.println(files[0].isFile()); //파일이면 true를 반환
+		
+		//파일크기
+		File thisFile = new File(path+ "/src/ch15_inout/FileBasic.java");
+		
+		System.out.println(thisFile.length());
+		
+		
+	}
+}

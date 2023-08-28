@@ -1,0 +1,32 @@
+package ch14_jdbc_conn.model;
+
+public class OutVO {
+	
+	private int rnum;
+	 private String bbsTitle;   
+     private String authorId;
+	public int getRnum() {
+		return rnum;
+	}
+	public void setRnum(int rnum) {
+		this.rnum = rnum;
+	}
+	public String getBbsTitle() {
+		return bbsTitle;
+	}
+	public void setBbsTitle(String bbsTitle) {
+		this.bbsTitle = bbsTitle;
+	}
+	public String getAuthorId() {
+		return authorId;
+	}
+	public void setAuthorId(String authorId) {
+		this.authorId = authorId;
+	}
+	@Override
+	public String toString() {
+		return "OutVO [rnum=" + rnum + ", bbsTitle=" + bbsTitle + ", authorId=" + authorId + "]";
+	} 
+	
+}
+

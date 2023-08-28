@@ -1,0 +1,31 @@
+package ch14_jdbc_conn.model;
+
+public class OutVO {
+	
+	public int getRnum() {
+		return rnum;
+	}
+	public void setRnum(int rnum) {
+		this.rnum = rnum;
+	}
+	public String getOutTitle() {
+		return OutTitle;
+	}
+	public void setOutTitle(String outTitle) {
+		OutTitle = outTitle;
+	}
+	public String getAuthorId() {
+		return authorId;
+	}
+	public void setAuthorId(String authorId) {
+		this.authorId = authorId;
+	}
+	private int rnum;
+	 private String OutTitle;   
+     private String authorId;
+	@Override
+	public String toString() {
+		return "OutVO [rnum=" + rnum + ", OutTitle=" + OutTitle + ", authorId=" + authorId + "]";
+	}
+}
+

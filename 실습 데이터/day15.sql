@@ -165,6 +165,16 @@ from bbs
 start with bbs_no = 1
 CONNECT BY PRIOR BBS_NO = parent_no;
 
+SELECT DECODE(level, 1, '∏ﬁ¿Œ±€','¥Ò±€') as status
+    , a.bbs_no as bbs_no
+    , LPAD(' ', 3* (level-1)) || a.bbs_content  as bbs_content
+    , a.author_id as author_id
+    , a.update_dt   as update_dt
+FROM bbs a
+START WITH bbs_no =1
+CONNECT BY PRIOR a.bbs_no = a.parent_no
+ORDER SIBLINGS BY update_dt desc;
+
 SELECT *
 FROM tb_user;
 
@@ -198,7 +208,7 @@ ORDER BY update_dt DESC
 select *
 from tb_user;
 desc tb_user;
-select 
+select *
 FROM bbs;
 desc bbs;
 
