@@ -4,13 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>JSP 게시판</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<script>
-		location.href='login.jsp';
-		location.href='main.jsp';
-	</script>
+	<p>널이다 이싀키야<p>
 
 </body>
 </html>
