@@ -1,5 +1,0 @@
-package ch14_jdbc;
-
-public class JdbcSelect {
-
-}

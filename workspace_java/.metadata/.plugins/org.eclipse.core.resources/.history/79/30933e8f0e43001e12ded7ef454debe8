@@ -1,5 +1,0 @@
-package ch14_jdbc_conn.dao;
-
-public class UserDao {
-
-}

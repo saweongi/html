@@ -14,6 +14,7 @@ String userPw = request.getParameter("userPw");
 String userNm = request.getParameter("userNm"); 
 System.out.println(userNm);
 System.out.println(userVO);
+UserService service = UserService.getInstance();
 
 
 %>
