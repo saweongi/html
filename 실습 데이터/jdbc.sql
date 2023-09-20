@@ -49,5 +49,18 @@ FROM board a
 , member b
 WHERE a.mem_id = b.mem_id
 ORDER BY a.update_date DESC;
+commit;
 SELECT NVL(MAX(board_no),0) +1
 from board;
+
+--게시판 컬럼 추가
+-------------게시판 컬럼추가
+ALTER TABLE board ADD DEL_YN VARCHAR2(1) DEFAULT 'N';
+ALTER TABLE member ADD DEL_YN VARCHAR2(10) DEFAULT 'N';
+SELECT * FROM board;
+
+ALTER TABLE member
+ADD profile_img
+VARCHAR2(1000);
+ALTER TABLE member
+ADD addr VARCHAR2(1000);
