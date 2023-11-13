@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kakao Map with Reverse Geocoding</title>
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="address"></div>
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=872e9999af801ab7fcfa718c29678485"></script>
+    <script>
+        // Kakao 지도 API 로드 후 실행할 함수
+        kakao.maps.load(() => {
+            const mapContainer = document.getElementById('map');
+            const mapOptions = {
+                center: new kakao.maps.LatLng(36.350412, 127.384548),
+                level: 8
+            };
+
+            const map = new kakao.maps.Map(mapContainer, mapOptions);
+
+            // 클릭 이벤트 핸들러를 등록합니다
+            kakao.maps.event.addListener(map, 'click', function(mouseEvent) {
+                // 클릭된 위치의 좌표를 가져옵니다
+                const latlng = mouseEvent.latLng;
+
+                // 좌표를 주소로 변환합니다
+                const geocoder = new kakao.maps.services.Geocoder();
+                geocoder.coord2RegionCode(latlng.getLng(), latlng.getLat(), function(result, status) {
+                    if (status === kakao.maps.services.Status.OK) {
+                        // 주소를 표시합니다
+                        document.getElementById('address').innerHTML = '클릭한 위치의 주소: ' + result[0].address_name;
+                    } else {
+                        alert('주소 변환 실패했습니다.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
